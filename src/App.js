@@ -8,11 +8,29 @@ import UseEffectExample from './Components/UseEffectExample';
 import Users from './Components/Users';
 import UseRefExample from './Components/UseRefExample';
 import UseReducer from './Components/UseReducer';
+import UseContext from './UseContexts.jsx';
+import UseContexts from './UseContexts.jsx';
+import Products from './pages/Products.jsx';
+import Contects from './pages/Contects.jsx';
+import Header from './Header/Header.jsx';
+import Dynamic from './pages/Dynamic.jsx';
+
 
 function App() {
   return (
     <div className="App">
-      <UseReducer/>
+      <h1>Routing</h1>
+      <Header/>
+      <Routes>
+        <Route path='/'element={<Home/>}/>
+        <Route path='/products' element={<Products/>}/>
+        <Route path='/about' element={<About/>}/>
+        <Route path='/contects' element={<Contects/>}/>
+        <Route path='/user/:id' element={<Dynamic/>}/>
+      </Routes>
+      {/* <UseContexts/> */}
+      {/* <UseContext/> */}
+      {/* <UseReducer/> */}
       {/* <UseRefExample/> */}
       {/* <Users/> */}
       {/* <Forms/> */}
